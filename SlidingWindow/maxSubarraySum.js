@@ -73,11 +73,11 @@ function maxSumarraySum2(arr, num) {
   for (let i = num; i < arr.length; i++) {
     //   Testing purposes
 
-    console.log("ITERATION #" + counter);
-    console.log("TEMPSUM BEFORE OPERATIONS : " + tempSum);
-    console.log("ARR[i] : " + arr[i]);
-    console.log("ARR[num] : " + arr[num]);
-    console.log("ARR[i-num] : " + arr[i - num]);
+    // console.log("ITERATION #" + counter);
+    // console.log("TEMPSUM BEFORE OPERATIONS : " + tempSum);
+    // console.log("ARR[i] : " + arr[i]);
+    // console.log("ARR[num] : " + arr[num]);
+    // console.log("ARR[i-num] : " + arr[i - num]);
 
     // First iteration : tempSum = 17
     // [2,6,9,2,1,8,5,6,3],3
@@ -86,7 +86,7 @@ function maxSumarraySum2(arr, num) {
     // arr[i] = 2
     // tempSum = 17 - 2 + 2
     tempSum = tempSum - arr[i - num] + arr[i];
-    console.log("TEMPSUM AFTER OPERATIONS : " + tempSum);
+    // console.log("TEMPSUM AFTER OPERATIONS : " + tempSum);
     maxSum = Math.max(maxSum, tempSum);
 
     // Testing purposes
@@ -105,4 +105,4 @@ function maxSumarraySum2(arr, num) {
 // maxSubarraySum([4, 2, 1, 6, 2], 4); // 13
 // maxSubarraySum([], 4); // null
 
-maxSumarraySum2([2, 6, 9, 2, 1, 8, 5, 6, 3], 3);
+maxSumarraySum2([2, 6, 9, 2, 1, 8, 5, 6, 3], 3); // 19
