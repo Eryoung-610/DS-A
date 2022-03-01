@@ -3,7 +3,6 @@
 let sameFrequency = (num1,num2) => {
 
     // Turn numbers into arrays
-
     let test = num => Number(num);
 
     let arr1 = Array.from(String(num1),test)
