@@ -42,7 +42,6 @@ function sumZero2(arr) {
         let sum = arr[left] + arr[right];
 
         if(sum === 0){
-            console.log([arr[left], arr[right]])
             return [arr[left], arr[right]]
             // If sum is still greater than 0, move right pointer down
             // Remember this is a SORTED array
@@ -55,8 +54,8 @@ function sumZero2(arr) {
     }
 }
 
-sumZero([-3,-2,-1,0,1,2,3]) // [-3,3]
-sumZero2([-3,-2,-1,0,1,2,3]) // [-3,3]
+console.log(sumZero([-3,-2,-1,0,1,2,3])) // [-3,3]
+console.log(sumZero2([-3,-2,-1,0,1,2,3])) // [-3,3]
 
 // i = -3, j = -2
 // i = -3, j = -1

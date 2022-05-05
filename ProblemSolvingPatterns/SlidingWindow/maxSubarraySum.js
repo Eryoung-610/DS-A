@@ -6,7 +6,6 @@ function maxSubarraySum(arr, num) {
   // If num is greater than the length of array
   // return null
   if (num > arr.length) {
-    console.log(null);
     return null;
   }
 
@@ -45,7 +44,6 @@ function maxSumarraySum2(arr, num) {
 
   // Num > array.length check
   if (arr.length < num) {
-    console.log(null);
     return null;
   }
 
@@ -71,7 +69,6 @@ function maxSumarraySum2(arr, num) {
   // [...,6,9,2,...,...]
   let counter = 1;
   for (let i = num; i < arr.length; i++) {
-
     // First iteration : tempSum = 17
     // [2,6,9,2,1,8,5,6,3],3
     // (tempSum = 17) (i = num) (num = 3)

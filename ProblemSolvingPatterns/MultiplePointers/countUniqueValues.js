@@ -7,7 +7,6 @@ let countUniqueValues = (arr) => {
     // Self explanatory.
     // If array length is 0, return 0
     if(arr.length === 0){
-        console.log(0)
         return 0;
     }
 
@@ -27,7 +26,7 @@ let countUniqueValues = (arr) => {
     
     // We return i+1 because the length of i + 1 indicates the total unique values
     // as we are replacing i with the value or arr[j] if arr[i] and arr[j] are NOT equal
-    console.log(i + 1)
+    // We are putting all unique values to the front of the array, then return the i-th index which is the length of the array of unique values
     return(i + 1);
 }
 

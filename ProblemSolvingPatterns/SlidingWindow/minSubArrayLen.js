@@ -20,8 +20,6 @@ function minSubArrayLen(arr, n) {
       }
     //   console.log(start, end, "total = ", total);
     }
-  
-    console.log(minLen === Infinity ? 0 : minLen)
     return minLen === Infinity ? 0 : minLen;
   }
 
