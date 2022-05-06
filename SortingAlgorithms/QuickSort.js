@@ -1,20 +1,46 @@
-// Like merge sort, explots the fact that arrays of 0 or 1 element are always sorted
-// Works by selecting one element(called the "pivot") and finding the index where the pivot should end up in the sorted array
+// PIVOT HELPER
+let pivot = (arr, start = 0, end = arr.length - 1) => {
+  let swap = (arr, idx1, idx2) => {
+    let temp = arr[idx1];
 
-// [5,2,1,8,4,7,6,3]
+    arr[idx1] = arr[idx2];
 
-// Pick an index, every value less than the value of that index gets shifted behind that index.
+    arr[idx2] = temp;
+  };
 
-// For example, we pick 5. All numbers in the array less than 5 are moved to the left. All numbers greater than 5 are moved to the right of 5.
+  let pivot = arr[start];
+  let swapIdx = start;
 
-// [3,2,1,4,5,7,6,8]
+  for (let i = start + 1; i <= end; i++) {
+    if (pivot > arr[i]) {
+      swapIdx++;
+      swap(arr, swapIdx, i);
+      //   console.log(arr);
+    }
+  }
+  swap(arr, start, swapIdx);
+  return swapIdx;
+};
 
-// We recursively repeat the process on the left and right side.
+let quickSort = (arr, left = 0, right = arr.length - 1) => {
+  if (left < right) {
+    let pivotIdx = pivot(arr, left, right); // 3
 
-// We pick 3 this time.
+    // left
+    quickSort(arr, left, pivotIdx - 1);
 
-// [2,1,3,4,5,7,6,8]. 
+    //   right
+    quickSort(arr, pivotIdx + 1, right);
+  }
+  return arr;
+};
 
-// [1,2,3,4,5,7,6,8]. Left side is all sorted. Next pivot spot is 7
-
-// [1,2,3,4,5,6,7,8]. All sorted
+console.log(quickSort([4, 6, 9, 1, 2, 5, 3, 8, 7]));
+// [4,6,9,1,2,5,3]
+// [3,2,1,4,6,9,5]
+//        4
+// 3,2,1    ,6,9,5
+//     3       6
+// 2,1       5   9
+//   2
+// 1
