@@ -7,10 +7,10 @@ let insertionSort = (arr) => {
       arr[j] = currentVal;
       console.log(arr, arr[j + 1], arr[j]);
     }
-    // console.log(arr);
+    console.log(arr);
   }
 
   return arr;
 };
 
-insertionSort([2, 1, 9, 46, 4]);
+insertionSort([5,1,4,6,2,3]);

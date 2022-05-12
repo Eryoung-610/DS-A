@@ -406,7 +406,7 @@ let radixSort = (nums) => {
 
 Input : ``` [23,345,5467, 12, 2345, 9852] ```
 
-Output (With console.tables to help visualize the buckets): 
+Output (With console.tables to help visualize the buckets):
 
 ```
 <!-- Last Digit Place -->
