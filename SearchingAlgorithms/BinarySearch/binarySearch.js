@@ -10,6 +10,7 @@ let binarySearch = (arr, val) => {
     let left = 0;
     let right = arr.length - 1;
     let middle = Math.floor((left + right) / 2)
+    console.log("MIDDLE BEFORE LOOP : ", middle);
 
     while (arr[middle] !== val && left <= right) {
         if (val < arr[middle]) {
@@ -19,12 +20,13 @@ let binarySearch = (arr, val) => {
         }
 
         middle = Math.floor((left + right) / 2);
+        console.log("MIDDLE IN LOOP : ", middle);
     }
     return arr[middle] === val ? middle : -1;
 }
 
 console.log(binarySearch([1, 2, 3, 4, 5], 2))
-console.log(binarySearch([1, 2, 3, 4, 5], 3))
-console.log(binarySearch([1, 2, 3, 4, 5], 5))
-console.log(binarySearch([1, 2, 3, 4, 5], 6))
-console.log(binarySearch([1, 2, 3, 4, 5], 1))
+// console.log(binarySearch([1, 2, 3, 4, 5], 3))
+// console.log(binarySearch([1, 2, 3, 4, 5], 5))
+// console.log(binarySearch([1, 2, 3, 4, 5], 6))
+// console.log(binarySearch([1, 2, 3, 4, 5], 1))
